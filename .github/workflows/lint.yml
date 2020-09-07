@@ -20,5 +20,5 @@ jobs:
     - name: Lint info.xml
       uses: ChristophWurst/xmllint-action@v1
       with:
-        xml-file: ./appinfo/info.xml
-        xml-schema-file: ./besu-maven-archetype/pom.xml
+        xml-file: ./besu-maven-archetype/pom.xml
+        xml-schema-file: ./maven-4.0.0.xsd

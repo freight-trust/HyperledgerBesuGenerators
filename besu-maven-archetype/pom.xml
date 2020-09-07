@@ -9,6 +9,14 @@
 
   <name>besu-maven-archetype</name>
 
+	<distributionManagement>
+		<repository>
+			<id>github</id>
+			<name>GitHub Freight Trust Apache Maven Packages</name>
+			<url>https://maven.pkg.github.com/freight-trust/HyperledgerBesuGenerators</url>
+		</repository>
+ </distributionManagement>
+ 
   <build>
     <extensions>
       <extension>

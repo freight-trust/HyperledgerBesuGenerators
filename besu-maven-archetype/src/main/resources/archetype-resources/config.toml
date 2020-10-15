@@ -1,15 +1,44 @@
 # Hyperledger Besu config file
+# 1.5.5
 
-# Network
-network="dev"
+# Node Information
+data-path={{ .Values.node.dataPath | quote }}
+genesis-file={{ .Values.node.genesisFilePath | quote }}
 
-# Enable RPC
-rpc-http-enabled=true
-rpc-ws-enabled=true
+# JSON-RPC
+rpc-http-enabled={{ .Values.node.rpc.enabled }}
+rpc-http-host={{ .Values.node.rpc.host | quote }}
+rpc-http-port={{ .Values.node.rpc.port }}
+rpc-http-api={{ .Values.node.rpc.api }}
+rpc-http-cors-origins={{ .Values.node.rpc.corsOrigins }}
+rpc-http-authentication-enabled={{ .Values.node.rpc.authenticationEnabled }}
 
-# Minimum gas price
-min-gas-price=0
+# GRAPHQL-RPC
+graphql-http-enabled={{ .Values.node.graphql.enabled }}
+graphql-http-host={{ .Values.node.graphql.host | quote }}
+graphql-http-port={{ .Values.node.graphql.port }}
+graphql-http-cors-origins={{ .Values.node.graphql.corsOrigins }}
 
-# Enable mining
-miner-enabled=true
-miner-coinbase="0xD254c71075AA9caB58916affd043D3d86c8d832f"
+
+
+# WebSockets API
+rpc-ws-enabled={{ .Values.node.ws.enabled }}
+rpc-ws-host={{ .Values.node.ws.host | quote }}
+rpc-ws-port={{ .Values.node.ws.port }}
+rpc-ws-api={{ .Values.node.ws.api }}
+rpc-ws-authentication-enabled={{ .Values.node.ws.authenticationEnabled }}
+
+
+# Metrics
+metrics-enabled={{ .Values.node.metrics.enabled }}
+metrics-host={{ .Values.node.metrics.host | quote }}
+metrics-port={{ .Values.node.metrics.port }}
+
+
+
+# Metrics Push
+metrics-push-enabled={{ .Values.node.metricsPush.enabled }}
+metrics-push-host={{ .Values.node.metricsPush.host | quote }}
+metrics-push-port={{ .Values.node.metricsPush.port }}
+metrics-push-interval={{ .Values.node.metricsPush.interval }}
+metrics-push-prometheus-job={{ .Values.node.metricsPush.prometheusJob | quote }}

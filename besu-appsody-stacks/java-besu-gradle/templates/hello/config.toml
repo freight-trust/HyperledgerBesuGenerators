@@ -1,15 +1,25 @@
-# Hyperledger Besu config file
+logging="INFO"
+data-path="/opt/besu/data"
+host-whitelist=["*"]
 
-# Network
-network="dev"
-
-# Enable RPC
+# rpc
 rpc-http-enabled=true
+rpc-http-host="0.0.0.0"
+rpc-http-port=8545
+rpc-http-cors-origins=["*"]
+
+# ws
 rpc-ws-enabled=true
+rpc-ws-host="0.0.0.0"
+rpc-ws-port=8546
 
-# Minimum gas price
-min-gas-price=0
+# graphql
+graphql-http-enabled=true
+graphql-http-host="0.0.0.0"
+graphql-http-port=8547
+graphql-http-cors-origins=["*"]
 
-# Enable mining
-miner-enabled=true
-miner-coinbase="0xD254c71075AA9caB58916affd043D3d86c8d832f"
+# metrics
+metrics-enabled=true
+metrics-host="0.0.0.0"
+metrics-port=9545

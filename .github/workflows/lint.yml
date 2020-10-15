@@ -1,0 +1,24 @@
+# GitHub XMLLint
+# GitHub Action for linting of XML files 
+# Linting against the official maven xsd file in our `xsdlint` repo
+# https://raw.githubusercontent.com/freight-trust/xsdlint/master/schemas/maven-4.0.0.xsd
+#
+#
+
+name: Lint
+
+on: [push]
+
+jobs:
+  xml-linters:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout
+      uses: actions/checkout@master
+    - name: Download schema
+      run: wget https://raw.githubusercontent.com/freight-trust/xsdlint/master/schemas/maven-4.0.0.xsd
+    - name: Lint info.xml
+      uses: ChristophWurst/xmllint-action@v1
+      with:
+        xml-file: ./besu-maven-archetype/pom.xml
+        xml-schema-file: ./maven-4.0.0.xsd

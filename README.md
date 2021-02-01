@@ -9,3 +9,9 @@ Appsody stacks for generating various sample projects using Besu while keeping t
 ## [besu-maven-archetype](besu-maven-archetype)
 
 Maven archetype for generating a sample project.
+
+Available through our [GitHub Maven Repository](https://github.com/freight-trust/HyperledgerBesuGenerators/packages/388034)
+
+## License
+
+Apache-2.0

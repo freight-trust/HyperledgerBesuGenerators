@@ -20,12 +20,12 @@
     <dependency>
       <groupId>org.web3j</groupId>
       <artifactId>core</artifactId>
-      <version>4.5.5</version>
+      <version>4.7.0</version>
     </dependency>
     <dependency>
       <groupId>org.web3j</groupId>
       <artifactId>besu</artifactId>
-      <version>4.5.5</version>
+      <version>4.7.0</version>
     </dependency>
   </dependencies>
 
@@ -34,7 +34,7 @@
         <plugin>
           <groupId>org.web3j</groupId>
           <artifactId>web3j-maven-plugin</artifactId>
-          <version>4.2.0</version>
+          <version>4.6.5</version>
           <configuration>
             <soliditySourceFiles />
           </configuration>
@@ -75,7 +75,7 @@
                 <goal>wget</goal>
               </goals>
               <configuration>
-                <url>https://bintray.com/api/ui/download/hyperledger-org/besu-repo/besu-1.4.0.zip</url>
+                <url>https://bintray.com/api/ui/download/hyperledger-org/besu-repo/besu-1.5.5.zip</url>
                 <unpack>true</unpack>
               </configuration>
             </execution>
